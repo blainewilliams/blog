@@ -19,8 +19,15 @@
 		<%= f.text_area :body%>
 	</p>
 	<p>
+		<% if @post.image.url %>
+		<%= image_tag @post.image.url(:thumb) %>
+	
+		<% else %>
 		<%= f.label :image %><br>
-		<%= f.file_field :image %>
+		<%= f.file_field :image %><br>
+			
+		<% end %>
+		
 	</p>
 
 	<p>
