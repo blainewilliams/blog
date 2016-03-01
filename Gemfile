@@ -46,3 +46,4 @@ group :development do
   gem 'spring'
 end
 gem 'devise'
+gem 'paperclip', '~> 4.3', '>= 4.3.5'
