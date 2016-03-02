@@ -16,7 +16,7 @@
 
 	<p>
 		<%= f.label :body %><br>
-		<%= f.text_area :body%>
+		<%= f.bootsy_area :body, editor_options: { alert_unsaved: false } %>
 	</p>
 	<p>
 		<% if @post.image.exists? %>
