@@ -50,3 +50,5 @@ end
 gem 'devise'
 gem 'paperclip', '~> 4.3', '>= 4.3.5'
 gem 'bootsy'
+gem 'searchkick', '~> 1.2', '>= 1.2.1'
+

@@ -19,8 +19,20 @@
 	<li class="category">Website</li>
 	<li><%= link_to "Blog", root_path %></li>
 	<li><%= link_to "About", about_path %></li>
-	
+	<%= form_tag search_posts_path, method: :get, class: "search-bar", role: "search" do %>
+	<li>
+
+		<%= text_field_tag :search, params[:search], class: "form-control" %>
+		<%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+	</li>
+	<% end  %>
 </ul>
+
+
+<p>
+	
+</p>
+
 <% if !user_signed_in?  %>
 <p class="sign_in"><%= link_to('Login', new_user_session_path)  %></p>
 <% end %>

@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+	searchkick
 	include Bootsy::Container
 	has_many :comments, dependent: :destroy
 
