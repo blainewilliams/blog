@@ -9,9 +9,9 @@
 	| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %> 
 	<% end %>
 	</p>
-	
+	<% if @post.image.exists? %>
 	<%= image_tag @post.image.url %>
-	
+	<% end %>
 	<p class="body">
 	<%= @post.body %>
 	</p>

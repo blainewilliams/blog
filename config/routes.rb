@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   end
   root "posts#index"
   get "/about", to: "pages#about"
-  
+  get 'posts/:id/remove_image', to: 'posts#remove_image', as: 'remove_post_image'
 end

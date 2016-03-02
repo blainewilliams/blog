@@ -36,8 +36,10 @@ class PostsController < ApplicationController
 		redirect_to root_path
 	end
 	def remove_image
+		@post = Post.find(params[:id])
 		@post.image = nil
 		@post.save
+		redirect_to edit_post_path, flash: { success: 'Image has been removed.' }
 	end
 
 	private

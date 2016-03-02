@@ -19,9 +19,9 @@
 		<%= f.text_area :body%>
 	</p>
 	<p>
-		<% if @post.image.url %>
+		<% if @post.image.exists? %>
 		<%= image_tag @post.image.url(:thumb) %>
-	
+		<%= link_to 'Remove image', remove_post_image_path, data: { confirm: 'Are you sure?' } %>
 		<% else %>
 		<%= f.label :image %><br>
 		<%= f.file_field :image %><br>
